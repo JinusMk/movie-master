@@ -2,13 +2,13 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { useContext } from 'react'
 
-import { ToogleContext } from 'common/UI/Dropdown/toggleDropdownContext'
+import { ToggleContext } from 'common/UI/Dropdown/toggleDropdownContext'
 
 import styles from './DropdownToggle.module.scss'
 
 export const DropdownToggle = (props) => {
   const { children, customOpenAction } = props
-  const { setIsOpen } = useContext(ToogleContext)
+  const { setIsOpen } = useContext(ToggleContext)
 
   const toggleHandle = (e) => {
     e.stopPropagation()

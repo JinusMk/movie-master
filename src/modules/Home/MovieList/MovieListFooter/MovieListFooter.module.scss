@@ -1,0 +1,8 @@
+.movieListFooterWrapper {
+  display: flex;
+  flex-direction: column;
+  .loading {
+    height: var(--p12);
+    margin-bottom: var(--p12);
+  }
+}

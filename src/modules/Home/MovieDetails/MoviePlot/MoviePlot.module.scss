@@ -1,0 +1,10 @@
+.moviePlotWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--p36);
+  margin-bottom: var(--p32);
+  border-bottom: var(--border-2) solid var(--theme-border-color-primary);
+  .heading {
+    margin-bottom: var(--p24);
+  }
+}

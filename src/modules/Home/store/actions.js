@@ -1,11 +1,8 @@
-import config from "../../../lib/config";
-import fetcher from "../../../lib/fetcher";
+import config from '../../../lib/config';
+import fetcher from '../../../lib/fetcher';
+import initialState from './initialState';
 
-import {
-  movieDetailsMapper,
-  movieListMapper,
-  paginationMapper,
-} from "./mapper";
+import { movieDetailsMapper, movieListMapper, paginationMapper } from './mapper';
 
 const actions = {
   getListOfMovies:
@@ -17,14 +14,14 @@ const actions = {
       try {
         const { movieListSearch } = getState();
         const params = {
-          s: movieListSearch,
+          s: movieListSearch || 'inception',
           page,
-          type: "movie",
+          type: 'movie',
         };
         const resp = await fetcher(config.BASE_API, {
           params,
         });
-        if (resp?.data && resp?.ok) {
+        if (resp?.data && resp?.ok && !resp?.data?.Error) {
           setState({
             movieList: movieListMapper(resp.data?.Search),
             movieListPagination: paginationMapper({
@@ -33,10 +30,10 @@ const actions = {
             }),
           });
         } else {
-          throw new Error("Invalid response");
+          throw new Error('Invalid response');
         }
       } catch (err) {
-        window.console.log("err", err);
+        window.console.log('err', err);
       } finally {
         setState({
           movieListLoader: false,
@@ -44,7 +41,7 @@ const actions = {
       }
     },
   getListOfSuggestion:
-    (page = 1) =>
+    ({ page = 1 }) =>
     async ({ setState, getState }) => {
       setState({
         suggestionsLoader: true,
@@ -54,24 +51,28 @@ const actions = {
         const params = {
           s: movieListSearch,
           page,
-          type: "movie",
+          type: 'movie',
         };
         const resp = await fetcher(config.BASE_API, {
           params,
         });
-        if (resp?.data && resp?.ok) {
+        if (resp?.data && resp?.ok && !resp?.data?.Error) {
+          const newSuggestions = movieListMapper(resp?.data?.Search);
+          const suggestionsPagination = paginationMapper({
+            totalResults: resp?.data?.totalResults,
+            page,
+          });
+          const suggestions =
+            page > 1 ? [...getState()?.suggestions, ...newSuggestions] : newSuggestions;
           setState({
-            suggesions: movieListMapper(resp?.data?.Search),
-            suggestionsPagination: paginationMapper({
-              totalResults: resp?.data?.totalResults,
-              page,
-            }),
+            suggestions,
+            suggestionsPagination,
           });
         } else {
-          throw new Error("Invalid response");
+          throw new Error('Invalid response');
         }
       } catch (err) {
-        window.console.log("err", err);
+        window.console.log('err', err);
       } finally {
         setState({
           suggestionsLoader: false,
@@ -83,6 +84,13 @@ const actions = {
     ({ setState }) =>
       setState({
         movieListSearch,
+      }),
+  resetSuggestionsList:
+    () =>
+    ({ setState }) =>
+      setState({
+        suggestions: initialState.suggestions,
+        suggestionsPagination: initialState.suggestionsPagination,
       }),
   getMovieDetails:
     (id) =>

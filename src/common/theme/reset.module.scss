@@ -1,3 +1,5 @@
+@import './responsive.module.scss';
+
 html,
 body,
 div,
@@ -10,13 +12,20 @@ h5,
 h6,
 p,
 pre,
-a{
+ol,
+ul,
+li,
+a {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+ol,
+ul {
+  list-style: none;
 }
 /* HTML5 display-role reset for older browsers */
 section {
@@ -75,23 +84,64 @@ div {
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
   }
 }
 
-:global{
-    body,
-    html,
-    #root {
-        height: 100%;
+:global {
+  body,
+  html,
+  #root {
+    height: 100%;
+  }
+
+  body * {
+    box-sizing: border-box;
+  }
+  body {
+    .visible-xs {
+      display: none !important;
     }
-    
-    body * {
-      box-sizing: border-box;
+
+    .visible-xl {
+      display: none !important;
     }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (min-width: $mobile-width) {
+      //desktop
+      .visible-xl {
+        display: flex !important;
+      }
+
+      .hidden-xl {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: $mobile-width) {
+      //mobile
+      .visible-xs {
+        display: flex !important;
+      }
+
+      .hidden-xs {
+        display: none !important;
+      }
+    }
+    .ellipsis {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 1.5;
+    }
+  }
 }

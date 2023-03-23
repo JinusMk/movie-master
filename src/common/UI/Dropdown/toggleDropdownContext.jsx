@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { createContext, useState, useRef } from "react";
 
-import { useOnClickOutside } from "common/hooks/useOnClickOutside";
+import useOnClickOutside from "common/hooks/useOnClickOutside";
 
 export const ToggleContext = createContext();
 

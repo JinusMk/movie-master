@@ -3,10 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
 import React, { useContext } from 'react'
 
-import { Icon, icons } from 'common/UI/Icon'
-import { Text } from 'common/UI/Text'
-import globalConstants from 'lib/config/globalConstants'
-import { ToogleContext } from 'common/UI/Dropdown/toggleDropdownContext'
+import { ToggleContext } from 'common/UI/Dropdown/toggleDropdownContext'
 
 import styles from './DropdownContent.module.scss'
 
@@ -21,7 +18,7 @@ export const DropdownContent = (props) => {
     staticPosition,
     ...rest
   } = props
-  const { isOpen, setIsOpen } = useContext(ToogleContext)
+  const { isOpen, setIsOpen } = useContext(ToggleContext)
 
   const isOpenValue = customOpen ? customOpen : isOpen
 
@@ -48,23 +45,10 @@ export const DropdownContent = (props) => {
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: globalConstants.animationDuration }}
+            transition={{ duration: 0.3 }}
             className={wrapperClass}
             key="anim1"
           >
-            {label && (
-              <Text as="div" className={styles.mobileTitle + ' visible-xs'}>
-                {label}
-              </Text>
-            )}
-            {!hideClose && (
-              <Icon
-                source={icons.xCircleLight}
-                size="var(--p20)"
-                onClick={handleClose}
-                className={styles.closeIcon + ' visible-xs'}
-              />
-            )}
             {children}
           </motion.div>
         )}

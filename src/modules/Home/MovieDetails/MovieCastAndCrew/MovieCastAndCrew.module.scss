@@ -1,0 +1,40 @@
+.castAndCrewWrapper {
+  display: flex;
+  flex-direction: row;
+  .heading {
+    margin-bottom: var(--p24);
+    display: flex;
+  }
+  .cast {
+    flex: 1;
+    margin-right: var(--p24);
+    .actorsList {
+      display: flex;
+      flex-direction: column;
+      .actorName {
+        padding: var(--p16);
+        background: var(--theme-background-color-secondary);
+        &:nth-child(even) {
+          background: var(--theme-background-color-tertiary);
+        }
+      }
+    }
+  }
+  .crew {
+    flex: 1;
+    .crewWrapper {
+      .crewItem {
+        padding: var(--p16);
+        background: var(--theme-background-color-secondary);
+        display: flex;
+        justify-content: space-between;
+        &:nth-child(even) {
+          background: var(--theme-background-color-tertiary);
+        }
+        .name {
+          max-width: var(--p320);
+        }
+      }
+    }
+  }
+}

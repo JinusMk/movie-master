@@ -4,4 +4,14 @@
     margin: 0 60px;
     padding-top: var(--p40);
     margin-bottom: var(--p40);
+    .suggestionWrapper{
+        width: 100%;
+        margin-top: var(--p4);
+        padding: 0;
+        border-radius: 0 0 var(--radius-4) var(--radius-4);
+        max-height: 37.5rem;
+        .dropdownItem{
+            padding: 0;
+        }
+    }
 }

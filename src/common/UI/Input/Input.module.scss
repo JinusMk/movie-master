@@ -1,26 +1,23 @@
 @import '../../theme/responsive.module.scss';
 
 .input {
-  font-size: var(--font-size-14);
+  font-size: var(--font-size-16);
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: none;
   background-color: transparent;
   width: 100%;
-  line-height: var(--p20);
+  line-height: var(--line-height-22);
   border: none;
   box-shadow: none;
+  height: var(--p32);
+  color: var(--theme-text-color-primary);
   &::placeholder {
-    color: var(--theme-text-color-tertiary);
+    color: var(--theme-text-color-disabled);
   }
   &:focus {
     outline: 0;
-  }
-  &:disabled {
-    &::placeholder {
-      color: var(--input-text-color-disable);
-    }
   }
 }
 
@@ -31,18 +28,10 @@
   justify-content: center;
 }
 
-.inputLabel {
-  display: flex;
-  font-size: var(--font-size-base);
-  margin-bottom: var(--p6);
-  align-items: center;
-}
-
 .leftIcon {
   display: flex;
   margin-right: var(--p8);
 }
-
 
 .rightIcon {
   display: flex;
@@ -70,7 +59,7 @@
 
 .inputContentBase {
   transition: all var(--transition-default);
-  padding: .313rem var(--p8);
+  padding: var(--p8) var(--p8);
   border: var(--input-border);
   border-radius: var(--radius-6);
   position: relative;
@@ -79,41 +68,18 @@
   align-items: center;
   @media (hover: hover) {
     &:hover {
-      border: var(--input-border-hover);
-      box-shadow: var(--input-box-shadow-hover);
       background-color: var(--input-background-color-hover);
     }
   }
   &:focus-within {
     border: var(--input-border-focus);
-    box-shadow: var(--input-box-shadow-focus);
-    background-color: var(--input-background-color-focus);
-  }
-}
-
-.disabledContent {
-  @media (hover: hover) {
-    &:hover {
-      border: var(--input-border);
-      box-shadow: none;
-      background-color: var(--input-background-color);
-    }
+    background-color: var(--input-background-color-hover);
   }
 }
 
 .primary {
+  --input-border: var(--border-1) solid var(--color-transparent);
   --input-background-color: var(--theme-background-color-secondary);
-  --input-background-color-hover: var(--theme-background-color-primary);
-  --input-border: var(--border-sm) solid var(--theme-background-color-secondary);
-  --input-border-hover: var(--border-sm) solid
-    var(--theme-border-color-accent-semi-light);
-  --input-box-shadow-hover: 0 0 0 0.188rem
-    var(--theme-border-color-accent-light);
-  --input-border-focus: var(--border-sm) solid var(--theme-border-color-accent);
-  --input-box-shadow-focus: 0 0 0 0.188rem
-    var(--theme-border-color-accent-light);
-  --input-background-color-focus: var(--theme-background-color-tertiary);
-  --input-text-color-disable: var(--theme-text-color-disabled);
-  --input-icon-border: var(--border-1) solid
-    var(--theme-border-color-accent-light);
+  --input-background-color-hover: var(--theme-background-color-tertiary);
+  --input-border-focus: var(--border-2) solid var(--theme-border-color-secondary);
 }

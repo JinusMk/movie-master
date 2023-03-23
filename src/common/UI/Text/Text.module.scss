@@ -1,13 +1,10 @@
-.link {
-  color: var(--theme-text-color-accent);
-  word-wrap: break-word;
-}
-
 .highlight {
   color: var(--theme-text-color-accent);
   font-weight: var(--font-weight-bold);
 }
-
+.textBase {
+  color: var(--theme-text-color-primary);
+}
 .readMoreButton {
   text-decoration: underline;
   padding-top: var(--p6);
@@ -36,24 +33,41 @@
 .xxs {
   font-size: var(--font-size-8);
 }
+
 .xs {
   font-size: var(--font-size-12);
+  line-height: var(--line-height-16);
 }
+
 .base {
   font-size: var(--font-size-14);
+  line-height: var(--line-height-16);
 }
+
 .sm {
   font-size: var(--font-size-16);
+  line-height: var(--line-height-20);
 }
+
 .lg {
   font-size: var(--font-size-18);
+  line-height: var(--line-height-22);
 }
+
 .xl {
   font-size: var(--font-size-20);
+  line-height: var(--line-height-26);
 }
-.xl2{
+
+.xl2 {
   font-size: var(--font-size-24);
+  line-height: var(--line-height-28);
 }
+.xl3 {
+  font-size: var(--font-size-32);
+  line-height: var(--line-height-36);
+}
+
 .ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;

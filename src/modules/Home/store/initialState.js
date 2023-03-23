@@ -8,7 +8,7 @@ export default {
   },
   // suggestions
   suggestionsLoader: false,
-  movieListSearch: "inception",
+  movieListSearch: '',
   suggestions: [],
   suggestionsPagination: {
     currentPage: 0,

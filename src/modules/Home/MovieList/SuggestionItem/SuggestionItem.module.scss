@@ -1,0 +1,24 @@
+.suggestionItemWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+    transition: var(--transition-default);
+    padding: var(--p16);
+    &:hover{
+        background-color: var(--theme-background-color-secondary);
+    }
+    .imageWrapper{
+        width: var(--p40);
+        height: var(--p40);
+    }
+    .textContent{
+        margin-left: var(--p16);
+        display: flex;
+        flex-direction: column;
+        .title{
+            margin-bottom: var(--p6);
+        }
+    }
+}

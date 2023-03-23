@@ -3,13 +3,11 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import { Icon } from "../Icon";
-import { Text } from "../Text";
 
 import styles from "./Input.module.scss";
 
 export const Input = (props) => {
   const {
-    label,
     leftIcon,
     prefix,
     postfix,
@@ -30,7 +28,6 @@ export const Input = (props) => {
     : {};
 
   const inputWrapperClass = classNames(styles.inputContentBase, {
-    [styles.disabledContent]: rest.disabled,
     [styles[variant]]: variant,
     [className ? className : ""]: className,
   });
@@ -41,7 +38,6 @@ export const Input = (props) => {
 
   return (
     <div className={styles.InputWrapper}>
-      {label && <span className={styles.inputLabel}>{label}</span>}
       <div className={inputWrapperClass}>
         {leftIcon && (
           <div className={styles.leftIcon}>
@@ -74,7 +70,6 @@ export const Input = (props) => {
 
 Input.propTypes = {
   variant: PropTypes.string,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   leftIcon: PropTypes.string,
   rightIcon: PropTypes.string,
   className: PropTypes.string,

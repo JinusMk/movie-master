@@ -1,0 +1,11 @@
+.detailsHeaderWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: var(--p32);
+  margin-bottom: var(--p32);
+  cursor: pointer;
+  .text {
+    margin-left: var(--p8);
+  }
+}

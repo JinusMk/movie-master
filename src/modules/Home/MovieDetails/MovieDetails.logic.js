@@ -1,4 +1,17 @@
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useMovieDetails } from '../store';
+
 const useLogic = () => {
-  return {};
+  const { id } = useParams();
+  const [{ movieDetails, movieDetailsLoader }, actions] = useMovieDetails();
+
+  useEffect(() => {
+    actions.getMovieDetails(id);
+  }, []);
+
+  return {
+    movieDetails,
+  };
 };
 export default useLogic;

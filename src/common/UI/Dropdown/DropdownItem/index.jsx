@@ -1,18 +1,15 @@
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { useContext } from 'react'
-
-import { Divider } from 'common/UI/Divider'
-import { ToogleContext } from 'common/UI/Dropdown/toggleDropdownContext'
+import { ToggleContext } from 'common/UI/Dropdown/toggleDropdownContext'
 
 import styles from './DropdownItem.module.scss'
 
 export const DropdownItem = (props) => {
-  const { setIsOpen } = useContext(ToogleContext)
+  const { setIsOpen } = useContext(ToggleContext)
 
   const {
     children,
-    hasDivider = false,
     onClick,
     closeOnSelect,
     ...rest
@@ -31,9 +28,6 @@ export const DropdownItem = (props) => {
 
   return (
     <>
-      {hasDivider && (
-        <Divider className={styles.hasDivider} colorScheme="secondary" />
-      )}
       <div
         onClick={handleOnClick}
         {...rest}
@@ -49,6 +43,5 @@ export const DropdownItem = (props) => {
 DropdownItem.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
-  hasDivider: PropTypes.bool,
   closeOnSelect: PropTypes.bool,
 }

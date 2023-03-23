@@ -1,0 +1,43 @@
+.movieOverviewWrapper {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: var(--p36);
+  border-bottom: var(--border-2) solid var(--theme-border-color-primary);
+  margin-bottom: var(--p32);
+  .poster {
+    border-radius: var(--radius-8);
+    width: var(--p400);
+    height: var(--p400);
+    border: var(--border-1) solid var(--theme-border-color-primary);
+    box-shadow: 0px 0 var(--p6) var(--p6) var(--theme-border-color-primary);
+  }
+  .overviewWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--p24);
+    flex: 1;
+    .titleWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: var(--p32);
+      .title {
+        max-width: 28.4rem;
+        margin-right: var(--p12);
+      }
+    }
+    .genre {
+      margin-bottom: var(--p24);
+    }
+    .meta {
+      color: var(--theme-text-color-primary);
+      margin-bottom: var(--p24);
+      .item {
+        margin: 0 var(--p12);
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.paginateBase {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  .pagination {
+    color: var(--theme-text-color-primary);
+    display: flex;
+    font-size: var(--font-size-14);
+  }
+  .active {
+    display: flex;
+    flex: 1;
+    background-color: var(--theme-color-secondary);
+    color: var(--theme-text-color-primary);
+    border-radius: var(--p8);
+    border-collapse: collapse;
+  }
+  .pageClassName {
+    display: flex;
+    margin: 0 var(--p4);
+    padding: var(--p12) var(--p16);
+    border-radius: var(--p8);
+    border-collapse: collapse;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--theme-color-secondary);
+      color: var(--theme-text-color-primary);
+    }
+  }
+  .prevNext {
+    color: var(--theme-color-secondary);
+    font-weight: var(--font-weight-medium);
+    &:hover {
+      background-color: initial;
+      color: var(--theme-background-color-accent);
+    }
+  }
+  .disabledClassName {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

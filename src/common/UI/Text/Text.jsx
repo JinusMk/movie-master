@@ -1,19 +1,18 @@
-import classNames from "classnames";
-import { regexEscape } from "../../../lib/utils/regexManager";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
+import classNames from 'classnames';
+import { regexEscape } from '../../../lib/utils/regexManager';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
-
-import styles from "./Text.module.scss";
+import styles from './Text.module.scss';
 
 export const Text = (props) => {
   const {
-    as: Component = "span",
+    as: Component = 'span',
     size = 512,
     linkify,
     children,
     truncate,
-    fontSize = "base",
+    fontSize = 'base',
     ellipsis,
     className,
     fontWeight = 400,
@@ -30,22 +29,20 @@ export const Text = (props) => {
 
   const buttonClass = classNames(styles.readMoreButton, {
     [styles[fontSize]]: fontSize,
-  })
+  });
 
   const toggleReadMore = () => setReadMore((prev) => !prev);
 
   const textClass = classNames(styles.textBase, {
     [styles[`weight-${fontWeight}`]]: fontWeight,
     [styles[fontSize]]: fontSize,
-    [className || ""]: className,
+    [className || '']: className,
     [styles.ellipsis]: ellipsis,
   });
 
   const highlightTextFn = (text, highlightText) => {
     // Split text on highlight term, include term itself into parts, ignore case
-    const parts = text.split(
-      new RegExp(`(${regexEscape(highlightText)})`, "gi")
-    );
+    const parts = text.split(new RegExp(`(${regexEscape(highlightText)})`, 'gi'));
     return (
       <>
         {parts.map((part, index) =>
@@ -107,13 +104,14 @@ export const Text = (props) => {
 };
 
 Text.fontSize = {
-  p8: "xxs",
-  p12: "xs",
-  p14: "base",
-  p16: "sm",
-  p18: "lg",
-  p20: "xl",
-  p24: "xl2",
+  p8: 'xxs',
+  p12: 'xs',
+  p14: 'base',
+  p16: 'sm',
+  p18: 'lg',
+  p20: 'xl',
+  p24: 'xl2',
+  p32: 'xl3',
 };
 
 Text.propTypes = {

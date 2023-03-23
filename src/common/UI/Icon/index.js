@@ -1,7 +1,7 @@
-import icons from '../../assets/icons'
+import icons from 'common/assets/icons';
 
-import { Icon } from './Icon'
+import { Icon } from './Icon';
 
-Icon.icons = icons
+Icon.icons = icons;
 
-export { Icon, icons }
+export { Icon, icons };
