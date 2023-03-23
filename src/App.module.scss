@@ -1,0 +1,14 @@
+@import './common/theme/stylevars.module.scss';
+@import './common/theme/reset.module.scss';
+@import './common/theme/font.module.scss';
+
+html {
+    font-size: 14px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

@@ -1,0 +1,13 @@
+.image {
+  background-color: var(--theme-background-color-primary);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.imageError {
+  width: var(--p24);
+  height: var(--p24);
+}

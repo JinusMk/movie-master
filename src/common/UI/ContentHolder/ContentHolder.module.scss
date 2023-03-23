@@ -1,0 +1,45 @@
+$contentHolderWidth: 55rem;
+
+.contentHolderBase {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  background-color: var(--theme-background-color-primary);
+  flex-direction: column;
+  .fullHeader{
+    display: flex;
+    flex-direction: column;
+  }
+  .bodyContent{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    .container{
+      width: 100%;
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      .scroller{
+        width: 100%;
+        display: flex;
+        flex: 1 1 auto;
+        height: 0;
+        align-items: flex-start;
+        justify-content: center;
+        overflow-y: auto;
+        .content{
+          width: $contentHolderWidth;
+          min-width: $contentHolderWidth;
+          max-width: $contentHolderWidth;
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto;
+          padding-bottom: var(--p36);
+        }
+      }
+    }
+    
+  }
+}

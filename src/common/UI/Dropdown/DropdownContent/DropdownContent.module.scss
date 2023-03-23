@@ -1,0 +1,71 @@
+@import 'common/theme/responsive.module.scss';
+
+.wrapper {
+  display: flex;
+  z-index: var(--z-very-high);
+  outline: none;
+  position: absolute;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  flex-direction: column;
+  background-color: var(--theme-background-color-tertiary);
+  top: 100%;
+  padding: var(--p12);
+  width: max-content;
+  max-height: var(--p384);
+  overflow-y: auto;
+  &.left {
+    right: 0;
+  }
+  &.right {
+    left: 0;
+  }
+  &.static{
+    position: static;
+  }
+  @include mobile{
+    width: 100%;
+    height: auto;
+    min-height: 10%;
+    justify-content: flex-start;
+
+    top: auto;
+    left: 0px;
+    position: fixed;
+    overflow-y: auto;
+    
+    bottom: 0px !important;
+    padding:var(--p20);
+    border-top-left-radius: var(--border-12);
+    border-top-right-radius: var(--border-12);
+    background-color: var(--theme-background-color-tertiary);
+  }
+}
+
+@include mobile{
+  .overlay{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    z-index: var(--z-medium);
+    background-color: var(--theme-background-color-inverse-primary);
+  }
+  .closeIcon{
+    position: absolute;
+    top: var(--p20);
+    right: var(--p20);
+    z-index: var(--z-very-high);
+    cursor: pointer;
+  }
+  .mobileTitle{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-self: stretch;
+    margin-bottom: var(--p20);
+  }
+}

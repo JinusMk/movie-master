@@ -1,0 +1,6 @@
+.headerWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: var(--p24);
+    border-bottom: 1px solid var(--theme-border-color-primary-light);
+}

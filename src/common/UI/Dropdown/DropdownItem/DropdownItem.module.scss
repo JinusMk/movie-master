@@ -1,0 +1,9 @@
+.item {
+  outline: 0;
+  width: 100%;
+  display: flex;
+  padding: var(--p8) var(--p12);
+}
+.hasDivider {
+  margin: var(--p4) 0;
+}

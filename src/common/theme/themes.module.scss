@@ -1,0 +1,26 @@
+.defaultTheme{
+      /* Colors */
+    --theme-color-primary: var(--color-white);
+    --theme-color-inverse-primary: var(--color-black);
+    --theme-color-accent: var(--color-orange400);
+      /* Background */
+    --theme-background-transparent: var(--color-transparent);
+    --theme-background-color-primary: var(--color-grey900);
+    --theme-background-color-secondary: var(--color-grey800);
+    --theme-background-color-tertiary: var(--color-white);
+      /*Typography*/
+    --theme-text-color-primary: var(--color-black);
+    --theme-text-color-secondary: var(--color-grey300);
+    --theme-text-color-tertiary: var(--color-grey400);
+    --theme-text-color-disabled: var(--color-grey500);
+      /* Border */
+    --theme-border-color-primary: var(--color-grey700);
+    --theme-border-color-primary-light: var(--color-grey800);
+    --theme-border-color-accent-semi-light: var(--color-orange600);
+    --theme-border-color-accent-light: var(--color-orange700);
+}
+.defaultTheme, .darkTheme{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

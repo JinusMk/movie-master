@@ -1,0 +1,97 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  appearance: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  overflow: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+
+:global{
+    body,
+    html,
+    #root {
+        height: 100%;
+    }
+    
+    body * {
+      box-sizing: border-box;
+    }
+}
