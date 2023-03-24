@@ -1,10 +1,11 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, test, expect } from 'vitest';
 import MovieCard from '../index';
 
 describe('<MovieCard/>', () => {
   test('should render the movie card with correct title', async () => {
-    render(<MovieCard title="The Shawshank Redemption" />);
+    render(<MovieCard title="The Shawshank Redemption"></MovieCard>);
     expect(screen.getByText('The Shawshank Redemption')).toBeInTheDocument();
   });
 

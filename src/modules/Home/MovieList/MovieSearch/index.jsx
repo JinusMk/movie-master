@@ -47,7 +47,7 @@ const MovieSearch = () => {
     <div className={styles.movieSearchWrapper} ref={ref}>
       <Dropdown>
         <Input
-          placeholder="Search for movies..."
+          placeholder="Search for movies and click Enter..."
           leftIcon={icons.search}
           leftIconSize="var(--p20)"
           rightIcon={movieListSearch?.length ? icons.close : null}

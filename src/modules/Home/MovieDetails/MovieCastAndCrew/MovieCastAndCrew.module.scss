@@ -16,6 +16,7 @@
       flex-direction: column;
       .actorName {
         padding: var(--p16);
+        color: var(--theme-text-color-tertiary);
         background: var(--theme-background-color-secondary);
         &:nth-child(even) {
           background: var(--theme-background-color-tertiary);
@@ -34,8 +35,12 @@
         &:nth-child(even) {
           background: var(--theme-background-color-tertiary);
         }
+        .role {
+          color: var(--theme-text-color-tertiary);
+        }
         .name {
           max-width: var(--p320);
+          color: var(--theme-text-color-tertiary);
         }
       }
     }

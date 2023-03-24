@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { ContentHolder } from 'common/components/ContentHolder/ContentHolder';
+import { ContentHolder } from '../index';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 

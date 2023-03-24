@@ -26,18 +26,23 @@
       .title {
         max-width: 28.4rem;
         margin-right: var(--p12);
+        color: var(--theme-text-color-tertiary);
+      }
+      .year {
+        color: var(--theme-text-color-tertiary);
+        margin-top: var(--p4);
       }
     }
     .genre {
       margin-bottom: var(--p24);
-      color: var(--theme-text-color-secondary);
+      color: var(--theme-text-color-tertiary);
     }
     .meta {
       color: var(--theme-text-color-primary);
       margin-bottom: var(--p24);
-      color: var(--theme-text-color-secondary);
+      color: var(--theme-text-color-tertiary);
       .item {
-        color: var(--theme-text-color-secondary);
+        color: var(--theme-text-color-tertiary);
         margin: 0 var(--p12);
         &:first-child {
           margin-left: 0;
@@ -46,14 +51,14 @@
     }
     .imdbRatings {
       .imdb {
-        color: var(--theme-text-color-secondary);
+        color: var(--theme-text-color-tertiary);
         display: flex;
         align-items: center;
         .star {
           margin: -2px var(--p6) 0 0;
         }
         .rating {
-          color: var(--theme-text-color-secondary);
+          color: var(--theme-text-color-tertiary);
         }
       }
     }

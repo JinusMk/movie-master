@@ -34,7 +34,7 @@ const MovieOverview = ({
             {title}
           </Text>
           <Text className={styles.year} fontWeight={400} fontSize={Text.fontSize.p16}>
-            ({year})
+            (&nbsp;{year}&nbsp;)
           </Text>
         </div>
         <Text className={styles.genre} fontSize={Text.fontSize.p16} fontWeight={500}>

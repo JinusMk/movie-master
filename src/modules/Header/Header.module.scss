@@ -1,11 +1,16 @@
 .headerWrapper {
   display: flex;
-  flex-direction: column;
-  padding: var(--p20) var(--p24);
+  flex-direction: row;
+  padding: var(--p16) var(--p24);
   border-bottom: var(--border-2) solid var(--theme-border-color-primary);
   justify-content: center;
+  align-items: center;
   .title {
     display: flex;
     justify-content: center;
+    color: var(--theme-text-color-tertiary);
+  }
+  .logo {
+    margin-right: var(--p12);
   }
 }

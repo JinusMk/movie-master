@@ -1,9 +1,10 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, test, expect } from 'vitest';
-import { Dropdown } from 'common/components/Dropdown/Dropdown';
-import { DropdownToggle } from 'common/components/Dropdown/DropdownToggle';
-import { DropdownContent } from 'common/components/Dropdown/DropdownContent';
-import { DropdownItem } from 'common/components/Dropdown/DropdownItem';
+import { Dropdown } from '../index';
+import { DropdownContent } from '../DropdownContent';
+import { DropdownItem } from '../DropdownItem';
+import { DropdownToggle } from '../DropdownToggle';
 import '@testing-library/jest-dom';
 
 describe('<Dropdown />', () => {

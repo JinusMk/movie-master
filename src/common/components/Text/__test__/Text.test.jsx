@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
 import { render, screen } from '@testing-library/react';
 import { describe, test, expect } from 'vitest';
-import 'lib/i18n';
-import { Text } from 'common/components/Text/Text';
+import { Text } from '../index';
 import '@testing-library/jest-dom';
 
 describe('<Text />', () => {
