@@ -4,7 +4,6 @@ import { memo } from 'react';
 import icons from 'common/assets/icons';
 import useLogic from './MovieSearch.logic';
 import { Dropdown } from 'common/UI/Dropdown';
-import { DropdownToggle } from 'common/UI/Dropdown/DropdownToggle';
 import { DropdownContent } from 'common/UI/Dropdown/DropdownContent';
 import { DropdownItem } from 'common/UI/Dropdown/DropdownItem';
 import SuggestionItem from '../SuggestionItem';
@@ -30,9 +29,9 @@ const MovieSearch = () => {
   const suggestionsList = (
     <>
       {suggestions?.map((suggestion) => (
-        <DropdownItem className={styles.dropdownItem} key={suggestion?.imdbID}>
+        <DropdownItem className={styles.dropdownItem} key={suggestion?.id}>
           <SuggestionItem
-            id={suggestion?.imdbID}
+            id={suggestion?.id}
             title={suggestion?.title}
             year={suggestion?.year}
             poster={suggestion?.poster}

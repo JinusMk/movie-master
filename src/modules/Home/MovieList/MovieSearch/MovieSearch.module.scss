@@ -1,17 +1,23 @@
-.movieSearchWrapper{
-    display: flex;
-    flex-direction: column;
-    margin: 0 60px;
-    padding-top: var(--p40);
-    margin-bottom: var(--p40);
-    .suggestionWrapper{
-        width: 100%;
-        margin-top: var(--p4);
-        padding: 0;
-        border-radius: 0 0 var(--radius-4) var(--radius-4);
-        max-height: 37.5rem;
-        .dropdownItem{
-            padding: 0;
-        }
+@import '/src/common/theme/responsive.module.scss';
+
+.movieSearchWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 60px;
+  padding-top: var(--p40);
+  margin-bottom: var(--p40);
+  .suggestionWrapper {
+    width: 100%;
+    margin-top: var(--p4);
+    padding: 0;
+    border-radius: 0 0 var(--radius-6) var(--radius-6);
+    max-height: 37.5rem;
+    .dropdownItem {
+      padding: 0;
     }
+  }
+  @include tablet {
+    padding-top: var(--p24);
+    margin: 0 0 var(--p24) 0;
+  }
 }

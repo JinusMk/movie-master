@@ -1,5 +1,6 @@
 import { Text } from 'common/UI/Text';
 import styles from './MovieCastAndCrew.module.scss';
+import PropTypes from 'prop-types';
 
 const MovieCastAndCrew = ({ actors, director, writer }) => {
   const CrewItem = (label, name) => (
@@ -37,5 +38,10 @@ const MovieCastAndCrew = ({ actors, director, writer }) => {
       </div>
     </div>
   );
+};
+MovieCastAndCrew.propTypes = {
+  actors: PropTypes.arrayOf(PropTypes.string),
+  director: PropTypes.string,
+  writer: PropTypes.string,
 };
 export default MovieCastAndCrew;

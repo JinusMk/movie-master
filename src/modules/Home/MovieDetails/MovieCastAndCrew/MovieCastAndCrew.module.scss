@@ -1,3 +1,5 @@
+@import '/src/common/theme/responsive.module.scss';
+
 .castAndCrewWrapper {
   display: flex;
   flex-direction: row;
@@ -35,6 +37,13 @@
           max-width: var(--p320);
         }
       }
+    }
+  }
+  @include tablet {
+    flex-direction: column;
+    .cast {
+      margin-right: 0;
+      margin-bottom: var(--p32);
     }
   }
 }

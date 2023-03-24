@@ -1,3 +1,5 @@
+@import '/src/common/theme/responsive.module.scss';
+
 .movieOverviewWrapper {
   display: flex;
   flex-direction: row;
@@ -38,6 +40,16 @@
           margin-left: 0;
         }
       }
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+    .poster {
+      width: 100%;
+      margin-bottom: var(--p32);
+    }
+    .overviewWrapper {
+      margin-left: 0;
     }
   }
 }

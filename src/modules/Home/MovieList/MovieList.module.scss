@@ -1,6 +1,21 @@
-.movieListWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+@import '/src/common/theme/responsive.module.scss';
+
+.movieListWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.searchResult {
+  margin-bottom: var(--p32);
+  @include tablet {
+    margin-bottom: var(--p24);
+  }
+}
+.noResultsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }

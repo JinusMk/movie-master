@@ -1,5 +1,6 @@
 import { Text } from 'common/UI/Text';
 import styles from './MoviePlot.module.scss';
+import PropTypes from 'prop-types';
 
 const MoviePlot = ({ plot }) => {
   return (
@@ -12,5 +13,8 @@ const MoviePlot = ({ plot }) => {
       </Text>
     </div>
   );
+};
+MoviePlot.propTypes = {
+  plot: PropTypes.string,
 };
 export default MoviePlot;

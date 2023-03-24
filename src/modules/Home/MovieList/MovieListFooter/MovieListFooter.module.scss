@@ -1,8 +1,16 @@
+@import '/src/common/theme/responsive.module.scss';
+
 .movieListFooterWrapper {
   display: flex;
   flex-direction: column;
   .loading {
     height: var(--p12);
     margin-bottom: var(--p12);
+  }
+  .paginate {
+    @include tablet {
+      max-width: 100%;
+      overflow-y: auto;
+    }
   }
 }

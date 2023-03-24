@@ -15,6 +15,7 @@ const MovieListFooter = () => {
           onChange={({ selected: page }) => {
             onPageChange(page + 1);
           }}
+          className={styles.paginate}
         />
       )}
     </div>

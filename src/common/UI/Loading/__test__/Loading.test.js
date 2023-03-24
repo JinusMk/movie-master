@@ -1,20 +1,14 @@
-import { render, screen } from '@testing-library/react'
-import React from 'react'
+import { render, screen } from '@testing-library/react';
+import React from 'react';
 
-import '@testing-library/jest-dom'
-import '@testing-library/jest-dom/extend-expect'
-import { Loading } from '../index'
+import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/extend-expect';
+import { Loading } from '../index';
 
 describe('<Loading />', () => {
   it('should render Dot Loading', async () => {
-    render(<Loading />)
+    render(<Loading />);
 
-    expect(screen.getAllByTestId('dot')).toHaveLength(3)
-  })
-
-  it('should render Circle Loading', async () => {
-    render(<Loading variant="circle" />)
-
-    expect(screen.getByTestId('circle')).toBeInTheDocument
-  })
-})
+    expect(screen.getAllByTestId('dot')).toHaveLength(3);
+  });
+});

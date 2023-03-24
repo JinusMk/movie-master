@@ -1,3 +1,5 @@
+@import '/src/common/theme/responsive.module.scss';
+
 .paginateBase {
   display: flex;
   align-items: center;
@@ -26,6 +28,9 @@
     &:hover {
       background-color: var(--theme-color-secondary);
       color: var(--theme-text-color-primary);
+    }
+    @include tablet {
+      padding: var(--p8) var(--p12);
     }
   }
   .prevNext {

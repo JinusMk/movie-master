@@ -1,3 +1,5 @@
+@import '/src/common/theme/responsive.module.scss';
+
 .detailsHeaderWrapper {
   display: flex;
   flex-direction: row;
@@ -7,5 +9,9 @@
   cursor: pointer;
   .text {
     margin-left: var(--p8);
+  }
+  @include mobile {
+    padding-top: var(--p24);
+    margin-bottom: var(--p24);
   }
 }

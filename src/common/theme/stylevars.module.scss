@@ -72,9 +72,8 @@
   --border-12: 0.75rem; // 12px
 
   /* Shadow */
-  --shadow-xs: 0 0.063rem 0.25rem rgba(0, 0, 0, 0.04);
-  --shadow-sm: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  --shadow-default: 0px 0 var(--p6) var(--p6) var(--theme-border-color-primary);
+  --shadow-sm: 0 0.5rem 1rem rgba(0, 0, 0, 0.75);
 
   /* z-index */
   --z-very-high: 11;
@@ -84,4 +83,6 @@
 
   /* Transitions */
   --transition-default: 0.4s ease;
+
+
 }

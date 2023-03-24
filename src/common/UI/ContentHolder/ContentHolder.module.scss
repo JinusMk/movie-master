@@ -1,3 +1,4 @@
+@import '/src/common/theme/responsive.module.scss';
 $contentHolderWidth: 60rem;
 
 .contentHolderBase {
@@ -7,21 +8,21 @@ $contentHolderWidth: 60rem;
   flex: 1;
   background-color: var(--theme-background-color-primary);
   flex-direction: column;
-  .fullHeader{
+  .fullHeader {
     display: flex;
     flex-direction: column;
   }
-  .bodyContent{
+  .bodyContent {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex: 1;
-    .container{
+    .container {
       width: 100%;
       display: flex;
       flex: 1 1 auto;
       flex-direction: column;
-      .scroller{
+      .scroller {
         width: 100%;
         display: flex;
         flex: 1 1 auto;
@@ -29,7 +30,7 @@ $contentHolderWidth: 60rem;
         align-items: flex-start;
         justify-content: center;
         overflow-y: auto;
-        .content{
+        .content {
           width: $contentHolderWidth;
           min-width: $contentHolderWidth;
           max-width: $contentHolderWidth;
@@ -37,9 +38,13 @@ $contentHolderWidth: 60rem;
           flex-direction: column;
           flex: 1 1 auto;
           padding-bottom: var(--p36);
+          @include tablet {
+            min-width: unset;
+            padding: 0 var(--p24) var(--p32);
+            max-width: 100%;
+          }
         }
       }
     }
-    
   }
 }

@@ -1,6 +1,6 @@
 const movieListMapper = (data) =>
   data?.map(({ imdbID, Year, Title, Poster }) => ({
-    imdbID,
+    id: imdbID,
     title: Title,
     year: Year,
     poster: Poster,
@@ -42,7 +42,7 @@ const movieDetailsMapper = ({
   title: Title,
   writer: Writer,
   year: Year,
-  imdbID,
+  id: imdbID,
   imdbRating,
   imdbVotes,
 });

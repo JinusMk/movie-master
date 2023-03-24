@@ -79,12 +79,12 @@ div {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #b0adad;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #676666;
   }
 
   /* Handle on hover */
@@ -104,39 +104,6 @@ div {
     box-sizing: border-box;
   }
   body {
-    .visible-xs {
-      display: none !important;
-    }
-
-    .visible-xl {
-      display: none !important;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    @media (min-width: $mobile-width) {
-      //desktop
-      .visible-xl {
-        display: flex !important;
-      }
-
-      .hidden-xl {
-        display: none !important;
-      }
-    }
-
-    @media (max-width: $mobile-width) {
-      //mobile
-      .visible-xs {
-        display: flex !important;
-      }
-
-      .hidden-xs {
-        display: none !important;
-      }
-    }
     .ellipsis {
       text-overflow: ellipsis;
       white-space: nowrap;

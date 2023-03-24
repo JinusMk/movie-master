@@ -4,6 +4,7 @@ import styles from './SuggestionItem.module.scss';
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import routes from 'lib/config/routes';
+import PropTypes from 'prop-types';
 
 const SuggestionItem = ({ title, year, poster, id }) => {
   return (
@@ -19,5 +20,12 @@ const SuggestionItem = ({ title, year, poster, id }) => {
       </div>
     </Link>
   );
+};
+
+SuggestionItem.propTypes = {
+  title: PropTypes.string,
+  year: PropTypes.string,
+  poster: PropTypes.string,
+  id: PropTypes.string,
 };
 export default memo(SuggestionItem);

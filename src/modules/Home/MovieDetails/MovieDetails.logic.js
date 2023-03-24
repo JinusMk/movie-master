@@ -12,6 +12,7 @@ const useLogic = () => {
 
   return {
     movieDetails,
+    movieDetailsLoader,
   };
 };
 export default useLogic;

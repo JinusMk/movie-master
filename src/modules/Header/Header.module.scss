@@ -4,4 +4,8 @@
   padding: var(--p20) var(--p24);
   border-bottom: var(--border-2) solid var(--theme-border-color-primary);
   justify-content: center;
+  .title {
+    display: flex;
+    justify-content: center;
+  }
 }

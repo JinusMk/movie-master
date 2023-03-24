@@ -1,6 +1,7 @@
 import { Image } from 'common/UI/Image';
 import { Text } from 'common/UI/Text';
 import styles from './MovieOverview.module.scss';
+import PropTypes from 'prop-types';
 
 const MovieOverview = ({
   title,
@@ -13,6 +14,11 @@ const MovieOverview = ({
   imdbRating,
   imdbVotes,
 }) => {
+  const MetaItem = (value) => (
+    <Text className={styles.item} fontSize={Text.fontSize.p16}>
+      {value}
+    </Text>
+  );
   return (
     <div className={styles.movieOverviewWrapper}>
       <Image url={poster} className={styles.poster} />
@@ -34,32 +40,27 @@ const MovieOverview = ({
           {genre}
         </Text>
         <div className={styles.meta}>
-          <Text className={styles.item} fontSize={Text.fontSize.p16}>
-            {country}
-          </Text>
-          |
-          <Text className={styles.item} fontSize={Text.fontSize.p16}>
-            {language}
-          </Text>
-          |
-          <Text className={styles.item} fontSize={Text.fontSize.p16}>
-            {language}
-          </Text>
-          |
-          <Text className={styles.item} fontSize={Text.fontSize.p16}>
-            {runtime}
-          </Text>
+          {MetaItem(country)} | {MetaItem(language)} | {MetaItem(runtime)}
         </div>
         <div className={styles.imdbRatings}>
           <Text className={styles.imdb} fontWeight={700} fontSize={Text.fontSize.p16}>
             IMDb: &nbsp;
-            <Text>
-              {imdbRating} ( {imdbVotes})
-            </Text>
+            <Text>{`${imdbRating} ( ${imdbVotes} )`}</Text>
           </Text>
         </div>
       </div>
     </div>
   );
+};
+MovieOverview.propTypes = {
+  title: PropTypes.string,
+  poster: PropTypes.string,
+  year: PropTypes.string,
+  genre: PropTypes.string,
+  runtime: PropTypes.string,
+  country: PropTypes.string,
+  language: PropTypes.string,
+  imdbRating: PropTypes.string,
+  imdbVotes: PropTypes.string,
 };
 export default MovieOverview;
