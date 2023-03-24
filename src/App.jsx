@@ -9,12 +9,12 @@ const MovieDetails = lazy(() => import('./modules/Home/MovieDetails'));
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route exact path={routes.MOVIE_LIST} element={<MovieList />} />
-        <Suspense fallback="Loading">
+      <Suspense fallback="Loading">
+        <Routes>
+          <Route exact path={routes.MOVIE_LIST} element={<MovieList />} />
           <Route exact path={routes.MOVIE_DETAILS} element={<MovieDetails />} />
-        </Suspense>
-      </Routes>
+        </Routes>
+      </Suspense>
     </Router>
   );
 };
