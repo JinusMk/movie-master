@@ -2,18 +2,22 @@
 
 Movie Master is a web application that allows you to search for movies and TV shows, view their details. It is built using React and utilizes the OMDB API to fetch movie and TV show data.
 
-Demo
+# Demo
+
 You can access the live demo of the application at https://movie-master-pink.vercel.app/
 
-Features
+# Features
+
 Search for movies and TV shows and experience the infinite scroll on the Suggestions dropdown and also pagination is available on the Listing screen.
 View details about movies and TV shows, including a summary, rating, released year, cast and crew
 
-Usage
+# Usage
+
 Enter the name of the movie or TV show you want to search for in the search bar and click Enter key.
 The search results will be displayed on the page. Click on a movie or TV show to view its details.
 
-Development
+# Development
+
 If you want to run the application locally, you can follow these steps:
 
 Clone the repository: git clone https://github.com/<your-username>/movie-master.git
