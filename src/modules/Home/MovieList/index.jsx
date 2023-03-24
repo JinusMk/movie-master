@@ -28,7 +28,7 @@ const MovieList = () => {
           className={styles.searchResult}>{`Showing results for "${searchParams}"`}</Text>
       )}
       <div className={styles.movieListWrapper}>
-        {!movieList?.length
+        {movieList?.length
           ? movieList?.map((movie) => <MovieCard key={movie?.id} movie={movie} />)
           : empty}
       </div>

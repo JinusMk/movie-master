@@ -14,7 +14,7 @@ const actions = {
       try {
         const { movieListSearch } = getState();
         const params = {
-          s: movieListSearch || 'hello',
+          s: movieListSearch || 'hello', //passing 'hello' by default to get a list of movies with pagination to show on FrontEnd, if no value is sending then the API will throw Error saying too many results found
           page,
           type: 'movie',
         };

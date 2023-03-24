@@ -8,6 +8,7 @@ const useLogic = () => {
   const onPageChange = (page) => {
     actions.getListOfMovies(page);
   };
+
   return {
     currentPage,
     totalPages,

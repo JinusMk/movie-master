@@ -7,7 +7,9 @@
     "start": "vite",
     "build": "REACT_APP_HOST_ENV=development vite build",
     "preview": "vite preview",
-    "test": "react-scripts test --passWithNoTests --coverage --watchAll=false",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
@@ -33,11 +35,13 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "gh-pages": "^5.0.0",
+    "jsdom": "^21.1.1",
     "lint-staged": "^10.5.4",
     "path": "^0.12.7",
     "prettier": "^2.8.6",
     "sass": "^1.59.3",
     "vite": "^4.2.0",
-    "vite-jsconfig-paths": "^2.0.1"
+    "vite-jsconfig-paths": "^2.0.1",
+    "vitest": "^0.29.7"
   }
 }

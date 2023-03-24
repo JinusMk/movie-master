@@ -9,16 +9,18 @@ const useLogic = () => {
   const searchParams = new URLSearchParams(location.search)?.get('search');
 
   useEffect(() => {
+    //this is called when the component unmounts
     return actions.resetHomePage;
   }, []);
 
   useEffect(() => {
     const func = async () => {
       if (movieListSearch !== searchParams) {
-        //reloading of page
+        //this is triggered on refreshing of page with the search param on the URL
         await actions.updateMovieListSearch(searchParams);
         actions.getListOfMovies();
       } else {
+        //trigger the getListOfMovies API on change of searchParams. Also, this will trigger the default list (cdm)
         actions.getListOfMovies();
       }
     };
