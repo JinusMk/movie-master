@@ -10,9 +10,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path={routes.MOVIE_LIST} element={<MovieList />} />
+        <Route exact path={routes.MOVIE_LIST} element={<MovieList />} />
         <Suspense fallback="Loading">
-          <Route path={routes.MOVIE_DETAILS} element={<MovieDetails />} />
+          <Route exact path={routes.MOVIE_DETAILS} element={<MovieDetails />} />
         </Suspense>
       </Routes>
     </Router>
