@@ -1,15 +1,15 @@
 const getEnv = () => {
-  if (window.location.hostname === "localhost") {
-    return "local";
+  if (window.location.hostname === 'localhost') {
+    return 'local';
   }
-  return process.env.REACT_APP_HOST_ENV || "development";
+  return process.env.REACT_APP_HOST_ENV || 'development';
 };
 
 const ENV = getEnv();
 
 const development = {
-  API_KEY: "5ddc1c29",
-  BASE_API: "http://www.omdbapi.com",
+  API_KEY: '5ddc1c29',
+  BASE_API: 'https://www.omdbapi.com',
 };
 
 const local = {

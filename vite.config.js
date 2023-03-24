@@ -11,6 +11,9 @@ export default defineConfig({
       src: path.resolve('src/'),
     },
   },
+  server: {
+    port: 4000,
+  },
   base: './',
   test: {
     globals: true,
