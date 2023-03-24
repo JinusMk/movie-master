@@ -1,6 +1,5 @@
 # movie-master
 
-Movie Master
 Movie Master is a web application that allows you to search for movies and TV shows, view their details. It is built using React and utilizes the OMDB API to fetch movie and TV show data.
 
 Demo
