@@ -5,8 +5,7 @@ import useLogic from './MovieCard.logic';
 import styles from './MovieCard.module.scss';
 import PropTypes from 'prop-types';
 
-const MovieCard = ({ movie }) => {
-  const { id, title, year, poster } = movie;
+const MovieCard = ({ id, title, year, poster }) => {
   const { onCardClick } = useLogic();
 
   return (
@@ -30,11 +29,10 @@ const MovieCard = ({ movie }) => {
 };
 
 MovieCard.propTypes = {
-  movie: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    year: PropTypes.string,
-    poster: PropTypes.string,
-  }),
+  id: PropTypes.string,
+  title: PropTypes.string,
+  year: PropTypes.string,
+  poster: PropTypes.string,
 };
+
 export default memo(MovieCard);

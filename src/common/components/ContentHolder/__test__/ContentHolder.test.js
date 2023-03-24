@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 describe('<ContentHolder />', () => {
-  test('Should render ContentHolder', async () => {
+  test('Should render ContentHolder', () => {
     render(
       <ContentHolder>
         <span data-testid="content">Content</span>

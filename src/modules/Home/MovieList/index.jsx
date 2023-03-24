@@ -29,7 +29,9 @@ const MovieList = () => {
       )}
       <div className={styles.movieListWrapper}>
         {movieList?.length
-          ? movieList?.map((movie) => <MovieCard key={movie?.id} movie={movie} />)
+          ? movieList?.map(({ id, title, year, poster }) => (
+              <MovieCard key={id} id={id} title={title} year={year} poster={poster} />
+            ))
           : empty}
       </div>
       <MovieListFooter />

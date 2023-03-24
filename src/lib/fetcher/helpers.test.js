@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import { convertToGetParams } from './helpers';
 
 test('Should convert GET parameters', () => {

@@ -1,16 +1,26 @@
-import { describe, test, expect } from 'vitest';
-
-import { render, screen } from '@testing-library/react';
-import { ErrorBoundary } from '..';
-import '@testing-library/jest-dom';
+import { describe, expect } from 'vitest';
+import { render } from '@testing-library/react';
+import { ErrorBoundary } from '../index';
 
 describe('<ErrorBoundary />', () => {
-  test('Should render ErrorBoundary', async () => {
-    render(
-      <ErrorBoundary>
-        <div test-id="test"></div>
+  it('should render children when no error occurs', () => {
+    const { getByText } = render(
+      <ErrorBoundary fallback={<div>Error occurred</div>}>
+        <div>Child component</div>
       </ErrorBoundary>
     );
-    expect(screen.getByTestId('test')).toBeInTheDocument();
+    expect(getByText('Child component')).toBeInTheDocument();
+  });
+
+  it('should render fallback when an error occurs', () => {
+    const ThrowError = () => {
+      throw new Error('Test error');
+    };
+    const { getByText } = render(
+      <ErrorBoundary fallback={<div>Error occurred</div>}>
+        <ThrowError />
+      </ErrorBoundary>
+    );
+    expect(getByText('Error occurred')).toBeInTheDocument();
   });
 });

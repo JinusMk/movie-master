@@ -6,7 +6,7 @@ import { Text } from 'common/components/Text/Text';
 import '@testing-library/jest-dom';
 
 describe('<Text />', () => {
-  test('should render Text', async () => {
+  test('should render Text', () => {
     render(<Text>My text</Text>);
 
     expect(screen.getByText('My text')).toBeInTheDocument();
