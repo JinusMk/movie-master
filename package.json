@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jinusmk.github.io/movie-master/",
   "scripts": {
     "start": "vite",
     "build": "REACT_APP_HOST_ENV=development vite build",
