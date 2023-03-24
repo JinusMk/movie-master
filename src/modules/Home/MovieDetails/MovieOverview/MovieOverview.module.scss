@@ -30,14 +30,30 @@
     }
     .genre {
       margin-bottom: var(--p24);
+      color: var(--theme-text-color-secondary);
     }
     .meta {
       color: var(--theme-text-color-primary);
       margin-bottom: var(--p24);
+      color: var(--theme-text-color-secondary);
       .item {
+        color: var(--theme-text-color-secondary);
         margin: 0 var(--p12);
         &:first-child {
           margin-left: 0;
+        }
+      }
+    }
+    .imdbRatings {
+      .imdb {
+        color: var(--theme-text-color-secondary);
+        display: flex;
+        align-items: center;
+        .star {
+          margin: -2px var(--p6) 0 0;
+        }
+        .rating {
+          color: var(--theme-text-color-secondary);
         }
       }
     }

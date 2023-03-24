@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import { memo } from 'react';
-import { Text } from 'common/UI/Text';
+import { Text } from 'common/components/Text';
 
 const Header = () => {
   return (

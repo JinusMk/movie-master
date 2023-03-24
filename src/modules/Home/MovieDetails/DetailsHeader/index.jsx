@@ -1,5 +1,5 @@
-import { Icon, icons } from 'common/UI/Icon';
-import { Text } from 'common/UI/Text';
+import { Icon, icons } from 'common/components/Icon';
+import { Text } from 'common/components/Text';
 import useLogic from './DetailsHeader.logic';
 import styles from './DetailsHeader.module.scss';
 

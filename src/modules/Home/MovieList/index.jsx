@@ -1,12 +1,12 @@
-import Header from '../../Header';
+import Header from 'modules/Header';
 import useLogic from './MovieList.logic';
 import styles from './MovieList.module.scss';
-import { ContentHolder } from '../../../common/UI/ContentHolder';
-import MovieCard from './MovieCard';
+import { ContentHolder } from 'common/components/ContentHolder';
+import MovieCard from 'modules/Home/components/MovieCard';
 import MovieSearch from './MovieSearch';
 import MovieListFooter from './MovieListFooter';
-import { Text } from 'common/UI/Text';
-import { Icon, icons } from 'common/UI/Icon';
+import { Text } from 'common/components/Text';
+import { Icon, icons } from 'common/components/Icon';
 
 const MovieList = () => {
   const { movieList, movieListLoader, searchParams } = useLogic();

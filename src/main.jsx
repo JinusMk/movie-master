@@ -1,5 +1,5 @@
-import { ErrorBoundary } from 'common/UI/ErrorBoundary';
-import { Text } from 'common/UI/Text';
+import { ErrorBoundary } from 'common/components/ErrorBoundary';
+import { Text } from 'common/components/Text';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';

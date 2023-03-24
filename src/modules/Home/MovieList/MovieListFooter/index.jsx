@@ -1,5 +1,5 @@
-import { Loading } from 'common/UI/Loading';
-import { Paginate } from 'common/UI/Paginate';
+import { Loading } from 'common/components/Loading';
+import { Paginate } from 'common/components/Paginate';
 import useLogic from './MovieListFooter.logic';
 import styles from './MovieListFooter.module.scss';
 

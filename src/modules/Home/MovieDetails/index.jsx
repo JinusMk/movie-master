@@ -1,5 +1,5 @@
-import { ContentHolder } from 'common/UI/ContentHolder';
-import { Loading } from 'common/UI/Loading';
+import { ContentHolder } from 'common/components/ContentHolder';
+import { Loading } from 'common/components/Loading';
 import Header from 'modules/Header';
 import DetailsHeader from './DetailsHeader';
 import MovieCastAndCrew from './MovieCastAndCrew';

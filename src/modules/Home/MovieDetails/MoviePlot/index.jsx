@@ -1,4 +1,4 @@
-import { Text } from 'common/UI/Text';
+import { Text } from 'common/components/Text';
 import styles from './MoviePlot.module.scss';
 import PropTypes from 'prop-types';
 

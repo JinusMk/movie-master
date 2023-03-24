@@ -1,15 +1,15 @@
-import { Input } from '../../../../common/UI/Input';
+import { Input } from 'common/components/Input';
 import styles from './MovieSearch.module.scss';
 import { memo } from 'react';
 import icons from 'common/assets/icons';
 import useLogic from './MovieSearch.logic';
-import { Dropdown } from 'common/UI/Dropdown';
-import { DropdownContent } from 'common/UI/Dropdown/DropdownContent';
-import { DropdownItem } from 'common/UI/Dropdown/DropdownItem';
-import SuggestionItem from '../SuggestionItem';
-import { IntersectionLoader } from 'common/UI/IntersectionLoader';
-import { Loading } from 'common/UI/Loading';
-import { Text } from 'common/UI/Text';
+import { Dropdown } from 'common/components/Dropdown';
+import { DropdownContent } from 'common/components/Dropdown/DropdownContent';
+import { DropdownItem } from 'common/components/Dropdown/DropdownItem';
+import SuggestionItem from 'modules/Home/components/SuggestionItem';
+import { IntersectionLoader } from 'common/components/IntersectionLoader';
+import { Loading } from 'common/components/Loading';
+import { Text } from 'common/components/Text';
 
 const MovieSearch = () => {
   const {
@@ -52,7 +52,7 @@ const MovieSearch = () => {
           leftIconSize="var(--p20)"
           rightIcon={movieListSearch?.length ? icons.close : null}
           rightIconAction={handleClearSearch}
-          value={movieListSearch}
+          value={movieListSearch ?? ''}
           onChange={(e) => handleMovieSearchChange(e.target.value)}
           onKeyDown={handleKeyDown}
         />

@@ -1,7 +1,8 @@
-import { Image } from 'common/UI/Image';
-import { Text } from 'common/UI/Text';
+import { Image } from 'common/components/Image';
+import { Text } from 'common/components/Text';
 import styles from './MovieOverview.module.scss';
 import PropTypes from 'prop-types';
+import { Icon, icons } from 'common/components/Icon';
 
 const MovieOverview = ({
   title,
@@ -43,9 +44,12 @@ const MovieOverview = ({
           {MetaItem(country)} | {MetaItem(language)} | {MetaItem(runtime)}
         </div>
         <div className={styles.imdbRatings}>
-          <Text className={styles.imdb} fontWeight={700} fontSize={Text.fontSize.p16}>
+          <Text className={styles.imdb} fontWeight={700} fontSize={Text.fontSize.p18}>
             IMDb: &nbsp;
-            <Text>{`${imdbRating} ( ${imdbVotes} )`}</Text>
+            <Icon source={icons.star} className={styles.star} />
+            <Text
+              fontWeight={500}
+              className={styles.rating}>{`${imdbRating} ( ${imdbVotes} )`}</Text>
           </Text>
         </div>
       </div>

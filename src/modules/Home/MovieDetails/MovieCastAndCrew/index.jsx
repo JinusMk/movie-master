@@ -1,11 +1,11 @@
-import { Text } from 'common/UI/Text';
+import { Text } from 'common/components/Text';
 import styles from './MovieCastAndCrew.module.scss';
 import PropTypes from 'prop-types';
 
 const MovieCastAndCrew = ({ actors, director, writer }) => {
   const CrewItem = (label, name) => (
     <div className={styles.crewItem}>
-      <Text className={styles.role} fontWeight={700} fontSize={Text.fontSize.p18}>
+      <Text className={styles.role} fontWeight={700} fontSize={Text.fontSize.p16}>
         {label}
       </Text>
       <Text className={styles.name} title={name} ellipsis fontSize={Text.fontSize.p16}>
